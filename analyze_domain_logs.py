@@ -44,7 +44,7 @@ print('\nTotal unique domain names: {}\n'.format(len(domain_name_tally.keys())))
 print('Top 5 domain names with most occurrences:\n{}'.format(
     '\n'.join(
         [domain_name for sort_index, domain_name in enumerate(sorted(
-            domain_name_tally.keys(), reverse=True, key=lambda domain_name: int(domain_name_tally[domain_name])
+            domain_name_tally.keys(), reverse=True, key=lambda domain_name: domain_name_tally[domain_name]
         )) if sort_index < 5]
     )
 ))
